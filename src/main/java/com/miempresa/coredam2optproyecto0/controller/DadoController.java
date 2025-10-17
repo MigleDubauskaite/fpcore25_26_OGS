@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/dados")
 public class DadoController {
-	
+
 	private static Random random = new Random();
 
 	private int lanzarDado() {
@@ -23,7 +23,7 @@ public class DadoController {
 		model.addAttribute("parrafo", "El valor de dado lanzado... ");
 		model.addAttribute("tirada", lanzarDado());
 
-		return "/dado/dado";
+		return "/dado/mostrar-dados";
 	}
 
 	@GetMapping("/lanzar-dos-dados")
@@ -34,8 +34,7 @@ public class DadoController {
 		model.addAttribute("coma", "-");
 		model.addAttribute("tirada1", lanzarDado());
 		model.addAttribute("tirada2", lanzarDado());
-
-		return "/dado/dos-dados";
+		return "/dado/mostrar-dados";
 	}
 
 }

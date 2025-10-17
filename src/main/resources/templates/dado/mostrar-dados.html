@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+
+	<h1 th:text="${titulo.toUpperCase}"></h1>
+	<p th:if="${tirada != null}">
+		Lanzamiento : <b th:text="${tirada}"></b>
+	</p>
+
+	<p th:if="${tirada == null}">
+		Lanzamiento: <b th:text="${tirada1}"></b> <span th:text="${coma}"></span>
+		<b th:text="${tirada2}"></b>
+	</p>
+
+</body>
+</html>

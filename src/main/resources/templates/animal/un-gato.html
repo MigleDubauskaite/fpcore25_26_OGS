@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${cabecera}"></title>
+</head>
+<body>
+
+	<h1 th:text="${titulo}"></h1>
+
+	<p th:if="${elGato == null}">El gato no existe...</p>
+
+	<div th:if="${elGato != null}">
+		<p>Son los datos de mi gato:</p>
+		<ul th:if="${elGato != null}">
+			<li>Tipo: <span th:text="${elGato.tipo}"></span></li>
+			<li>Precio: <span th:text="${elGato.precio}"></span> €
+			</li>
+			<li>Peso: <span th:text="${elGato.peso}"></span> kg
+			</li>
+		</ul>
+	</div>
+
+
+</body>
+</html>
